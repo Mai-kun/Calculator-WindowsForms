@@ -140,14 +140,23 @@ namespace Calculator
         
         private void btnAnswer_Click(object sender, EventArgs e)
         {
+            lbTextField.Text = lbAnswer.Text;
+            lbAnswer.Text = "";
+        }
+
+        private void lbTextField_TextChanged(object sender, EventArgs e)
+        {
             if (!string.IsNullOrEmpty(lbTextField.Text))
             {
                 if (IsMathemaicalSignOrComma(lbTextField.Text))
                 {
-                    lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
+                    string StringWithoutLastSign = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
+                    lbAnswer.Text = new DataTable().Compute(StringWithoutLastSign.Replace(",", "."), null).ToString();
                 }
-
-                lbTextField.Text = new DataTable().Compute(lbTextField.Text.Replace(",", "."), null).ToString();
+                else
+                {
+                    lbAnswer.Text = new DataTable().Compute(lbTextField.Text.Replace(",", "."), null).ToString();
+                }
             }
         }
     }
