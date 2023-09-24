@@ -195,7 +195,10 @@ namespace Calculator
 
         private void btnRightBracket_Click(object sender, EventArgs e) => txtTextField.Text += ")";
 
+        private void btnCeil_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

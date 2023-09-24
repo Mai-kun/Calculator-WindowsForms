@@ -52,24 +52,19 @@ namespace Calculator
             lbAnswer = new Label();
             btnLeftBracket = new Button();
             btnRightBracket = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
-            button20 = new Button();
+            btnPow = new Button();
+            btnE = new Button();
+            btnPi = new Button();
+            btnSin = new Button();
+            btnCos = new Button();
+            btnFact = new Button();
+            btnAbs = new Button();
+            btnLn = new Button();
+            btnLog = new Button();
+            btnFloor = new Button();
+            btnCeil = new Button();
+            btnCtg = new Button();
+            btnTg = new Button();
             txtTextField = new TextBox();
             SuspendLayout();
             // 
@@ -79,7 +74,8 @@ namespace Calculator
             btn7.Location = new System.Drawing.Point(30, 259);
             btn7.Margin = new Padding(4, 3, 4, 3);
             btn7.Name = "btn7";
-            btn7.Size = new System.Drawing.Size(82, 81);
+            btn7.RightToLeft = RightToLeft.No;
+            btn7.Size = new System.Drawing.Size(85, 85);
             btn7.TabIndex = 1;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
@@ -91,7 +87,8 @@ namespace Calculator
             btn8.Location = new System.Drawing.Point(119, 259);
             btn8.Margin = new Padding(4, 3, 4, 3);
             btn8.Name = "btn8";
-            btn8.Size = new System.Drawing.Size(82, 81);
+            btn8.RightToLeft = RightToLeft.No;
+            btn8.Size = new System.Drawing.Size(85, 85);
             btn8.TabIndex = 2;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
@@ -103,7 +100,8 @@ namespace Calculator
             btn9.Location = new System.Drawing.Point(208, 259);
             btn9.Margin = new Padding(4, 3, 4, 3);
             btn9.Name = "btn9";
-            btn9.Size = new System.Drawing.Size(82, 81);
+            btn9.RightToLeft = RightToLeft.No;
+            btn9.Size = new System.Drawing.Size(85, 85);
             btn9.TabIndex = 3;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
@@ -115,7 +113,8 @@ namespace Calculator
             btn4.Location = new System.Drawing.Point(30, 347);
             btn4.Margin = new Padding(4, 3, 4, 3);
             btn4.Name = "btn4";
-            btn4.Size = new System.Drawing.Size(82, 81);
+            btn4.RightToLeft = RightToLeft.No;
+            btn4.Size = new System.Drawing.Size(85, 85);
             btn4.TabIndex = 4;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
@@ -127,7 +126,8 @@ namespace Calculator
             btn5.Location = new System.Drawing.Point(119, 347);
             btn5.Margin = new Padding(4, 3, 4, 3);
             btn5.Name = "btn5";
-            btn5.Size = new System.Drawing.Size(82, 81);
+            btn5.RightToLeft = RightToLeft.No;
+            btn5.Size = new System.Drawing.Size(85, 85);
             btn5.TabIndex = 5;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
@@ -139,7 +139,8 @@ namespace Calculator
             btn6.Location = new System.Drawing.Point(208, 347);
             btn6.Margin = new Padding(4, 3, 4, 3);
             btn6.Name = "btn6";
-            btn6.Size = new System.Drawing.Size(82, 81);
+            btn6.RightToLeft = RightToLeft.No;
+            btn6.Size = new System.Drawing.Size(85, 85);
             btn6.TabIndex = 6;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
@@ -151,7 +152,8 @@ namespace Calculator
             btn1.Location = new System.Drawing.Point(30, 434);
             btn1.Margin = new Padding(4, 3, 4, 3);
             btn1.Name = "btn1";
-            btn1.Size = new System.Drawing.Size(82, 81);
+            btn1.RightToLeft = RightToLeft.No;
+            btn1.Size = new System.Drawing.Size(85, 85);
             btn1.TabIndex = 7;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
@@ -163,7 +165,8 @@ namespace Calculator
             btn2.Location = new System.Drawing.Point(119, 434);
             btn2.Margin = new Padding(4, 3, 4, 3);
             btn2.Name = "btn2";
-            btn2.Size = new System.Drawing.Size(82, 81);
+            btn2.RightToLeft = RightToLeft.No;
+            btn2.Size = new System.Drawing.Size(85, 85);
             btn2.TabIndex = 8;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
@@ -175,7 +178,8 @@ namespace Calculator
             btn3.Location = new System.Drawing.Point(208, 434);
             btn3.Margin = new Padding(4, 3, 4, 3);
             btn3.Name = "btn3";
-            btn3.Size = new System.Drawing.Size(82, 81);
+            btn3.RightToLeft = RightToLeft.No;
+            btn3.Size = new System.Drawing.Size(85, 85);
             btn3.TabIndex = 9;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
@@ -187,7 +191,8 @@ namespace Calculator
             btn0.Location = new System.Drawing.Point(119, 522);
             btn0.Margin = new Padding(4, 3, 4, 3);
             btn0.Name = "btn0";
-            btn0.Size = new System.Drawing.Size(82, 81);
+            btn0.RightToLeft = RightToLeft.No;
+            btn0.Size = new System.Drawing.Size(85, 85);
             btn0.TabIndex = 10;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
@@ -199,7 +204,8 @@ namespace Calculator
             btnDevide.Location = new System.Drawing.Point(315, 171);
             btnDevide.Margin = new Padding(4, 3, 4, 3);
             btnDevide.Name = "btnDevide";
-            btnDevide.Size = new System.Drawing.Size(82, 81);
+            btnDevide.RightToLeft = RightToLeft.No;
+            btnDevide.Size = new System.Drawing.Size(85, 85);
             btnDevide.TabIndex = 11;
             btnDevide.Text = "/";
             btnDevide.UseVisualStyleBackColor = true;
@@ -211,7 +217,8 @@ namespace Calculator
             btnMultipli.Location = new System.Drawing.Point(315, 259);
             btnMultipli.Margin = new Padding(4, 3, 4, 3);
             btnMultipli.Name = "btnMultipli";
-            btnMultipli.Size = new System.Drawing.Size(82, 81);
+            btnMultipli.RightToLeft = RightToLeft.No;
+            btnMultipli.Size = new System.Drawing.Size(85, 85);
             btnMultipli.TabIndex = 12;
             btnMultipli.Text = "x";
             btnMultipli.UseVisualStyleBackColor = true;
@@ -223,7 +230,8 @@ namespace Calculator
             btnMinus.Location = new System.Drawing.Point(315, 347);
             btnMinus.Margin = new Padding(4, 3, 4, 3);
             btnMinus.Name = "btnMinus";
-            btnMinus.Size = new System.Drawing.Size(82, 81);
+            btnMinus.RightToLeft = RightToLeft.No;
+            btnMinus.Size = new System.Drawing.Size(85, 85);
             btnMinus.TabIndex = 13;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
@@ -235,7 +243,8 @@ namespace Calculator
             btnPlus.Location = new System.Drawing.Point(315, 434);
             btnPlus.Margin = new Padding(4, 3, 4, 3);
             btnPlus.Name = "btnPlus";
-            btnPlus.Size = new System.Drawing.Size(82, 81);
+            btnPlus.RightToLeft = RightToLeft.No;
+            btnPlus.Size = new System.Drawing.Size(85, 85);
             btnPlus.TabIndex = 14;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
@@ -247,7 +256,8 @@ namespace Calculator
             btnAnswer.Location = new System.Drawing.Point(315, 522);
             btnAnswer.Margin = new Padding(4, 3, 4, 3);
             btnAnswer.Name = "btnAnswer";
-            btnAnswer.Size = new System.Drawing.Size(82, 81);
+            btnAnswer.RightToLeft = RightToLeft.No;
+            btnAnswer.Size = new System.Drawing.Size(85, 85);
             btnAnswer.TabIndex = 15;
             btnAnswer.Text = "=";
             btnAnswer.UseVisualStyleBackColor = true;
@@ -259,7 +269,8 @@ namespace Calculator
             btnComma.Location = new System.Drawing.Point(208, 522);
             btnComma.Margin = new Padding(4, 3, 4, 3);
             btnComma.Name = "btnComma";
-            btnComma.Size = new System.Drawing.Size(82, 81);
+            btnComma.RightToLeft = RightToLeft.No;
+            btnComma.Size = new System.Drawing.Size(85, 85);
             btnComma.TabIndex = 16;
             btnComma.Text = ",";
             btnComma.UseVisualStyleBackColor = true;
@@ -271,7 +282,8 @@ namespace Calculator
             btnClean.Location = new System.Drawing.Point(30, 171);
             btnClean.Margin = new Padding(4, 3, 4, 3);
             btnClean.Name = "btnClean";
-            btnClean.Size = new System.Drawing.Size(82, 81);
+            btnClean.RightToLeft = RightToLeft.No;
+            btnClean.Size = new System.Drawing.Size(85, 85);
             btnClean.TabIndex = 17;
             btnClean.Text = "C";
             btnClean.UseVisualStyleBackColor = true;
@@ -283,7 +295,8 @@ namespace Calculator
             btnDelete.Location = new System.Drawing.Point(119, 171);
             btnDelete.Margin = new Padding(4, 3, 4, 3);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new System.Drawing.Size(82, 81);
+            btnDelete.RightToLeft = RightToLeft.No;
+            btnDelete.Size = new System.Drawing.Size(85, 85);
             btnDelete.TabIndex = 18;
             btnDelete.Text = "<=";
             btnDelete.UseVisualStyleBackColor = true;
@@ -295,7 +308,8 @@ namespace Calculator
             btnPercent.Location = new System.Drawing.Point(208, 171);
             btnPercent.Margin = new Padding(4, 3, 4, 3);
             btnPercent.Name = "btnPercent";
-            btnPercent.Size = new System.Drawing.Size(82, 81);
+            btnPercent.RightToLeft = RightToLeft.No;
+            btnPercent.Size = new System.Drawing.Size(85, 85);
             btnPercent.TabIndex = 19;
             btnPercent.Text = "%";
             btnPercent.UseVisualStyleBackColor = true;
@@ -310,7 +324,7 @@ namespace Calculator
             lbAnswer.Location = new System.Drawing.Point(30, 106);
             lbAnswer.Margin = new Padding(4, 0, 4, 0);
             lbAnswer.Name = "lbAnswer";
-            lbAnswer.Size = new System.Drawing.Size(830, 55);
+            lbAnswer.Size = new System.Drawing.Size(747, 55);
             lbAnswer.TabIndex = 21;
             lbAnswer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -320,7 +334,8 @@ namespace Calculator
             btnLeftBracket.Location = new System.Drawing.Point(422, 171);
             btnLeftBracket.Margin = new Padding(4, 3, 4, 3);
             btnLeftBracket.Name = "btnLeftBracket";
-            btnLeftBracket.Size = new System.Drawing.Size(82, 81);
+            btnLeftBracket.RightToLeft = RightToLeft.No;
+            btnLeftBracket.Size = new System.Drawing.Size(85, 85);
             btnLeftBracket.TabIndex = 22;
             btnLeftBracket.Text = "(";
             btnLeftBracket.UseVisualStyleBackColor = true;
@@ -332,209 +347,169 @@ namespace Calculator
             btnRightBracket.Location = new System.Drawing.Point(511, 171);
             btnRightBracket.Margin = new Padding(4, 3, 4, 3);
             btnRightBracket.Name = "btnRightBracket";
-            btnRightBracket.Size = new System.Drawing.Size(82, 81);
+            btnRightBracket.RightToLeft = RightToLeft.No;
+            btnRightBracket.Size = new System.Drawing.Size(85, 85);
             btnRightBracket.TabIndex = 23;
             btnRightBracket.Text = ")";
             btnRightBracket.UseVisualStyleBackColor = true;
             btnRightBracket.Click += btnRightBracket_Click;
             // 
-            // button3
+            // btnPow
             // 
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button3.Location = new System.Drawing.Point(600, 171);
-            button3.Margin = new Padding(4, 3, 4, 3);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(82, 81);
-            button3.TabIndex = 24;
-            button3.Text = "/";
-            button3.UseVisualStyleBackColor = true;
+            btnPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPow.Location = new System.Drawing.Point(604, 259);
+            btnPow.Margin = new Padding(4, 3, 4, 3);
+            btnPow.Name = "btnPow";
+            btnPow.RightToLeft = RightToLeft.No;
+            btnPow.Size = new System.Drawing.Size(85, 85);
+            btnPow.TabIndex = 24;
+            btnPow.Text = "x^y\r\n";
+            btnPow.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnE
             // 
-            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button4.Location = new System.Drawing.Point(688, 171);
-            button4.Margin = new Padding(4, 3, 4, 3);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(82, 81);
-            button4.TabIndex = 25;
-            button4.Text = "/";
-            button4.UseVisualStyleBackColor = true;
+            btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnE.Location = new System.Drawing.Point(604, 171);
+            btnE.Margin = new Padding(4, 3, 4, 3);
+            btnE.Name = "btnE";
+            btnE.RightToLeft = RightToLeft.No;
+            btnE.Size = new System.Drawing.Size(85, 85);
+            btnE.TabIndex = 25;
+            btnE.Text = "e";
+            btnE.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnPi
             // 
-            button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button5.Location = new System.Drawing.Point(777, 171);
-            button5.Margin = new Padding(4, 3, 4, 3);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(82, 81);
-            button5.TabIndex = 26;
-            button5.Text = "/";
-            button5.UseVisualStyleBackColor = true;
+            btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPi.Location = new System.Drawing.Point(693, 171);
+            btnPi.Margin = new Padding(4, 3, 4, 3);
+            btnPi.Name = "btnPi";
+            btnPi.RightToLeft = RightToLeft.No;
+            btnPi.Size = new System.Drawing.Size(85, 85);
+            btnPi.TabIndex = 26;
+            btnPi.Text = "Pi";
+            btnPi.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnSin
             // 
-            button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button6.Location = new System.Drawing.Point(422, 259);
-            button6.Margin = new Padding(4, 3, 4, 3);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(82, 81);
-            button6.TabIndex = 27;
-            button6.Text = "/";
-            button6.UseVisualStyleBackColor = true;
+            btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSin.Location = new System.Drawing.Point(422, 259);
+            btnSin.Margin = new Padding(4, 3, 4, 3);
+            btnSin.Name = "btnSin";
+            btnSin.RightToLeft = RightToLeft.No;
+            btnSin.Size = new System.Drawing.Size(85, 85);
+            btnSin.TabIndex = 27;
+            btnSin.Text = "sin";
+            btnSin.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnCos
             // 
-            button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button7.Location = new System.Drawing.Point(511, 259);
-            button7.Margin = new Padding(4, 3, 4, 3);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(82, 81);
-            button7.TabIndex = 28;
-            button7.Text = "/";
-            button7.UseVisualStyleBackColor = true;
+            btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCos.Location = new System.Drawing.Point(511, 259);
+            btnCos.Margin = new Padding(4, 3, 4, 3);
+            btnCos.Name = "btnCos";
+            btnCos.RightToLeft = RightToLeft.No;
+            btnCos.Size = new System.Drawing.Size(85, 85);
+            btnCos.TabIndex = 28;
+            btnCos.Text = "cos";
+            btnCos.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnFact
             // 
-            button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button8.Location = new System.Drawing.Point(600, 259);
-            button8.Margin = new Padding(4, 3, 4, 3);
-            button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(82, 81);
-            button8.TabIndex = 29;
-            button8.Text = "/";
-            button8.UseVisualStyleBackColor = true;
+            btnFact.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnFact.Location = new System.Drawing.Point(693, 259);
+            btnFact.Margin = new Padding(4, 3, 4, 3);
+            btnFact.Name = "btnFact";
+            btnFact.RightToLeft = RightToLeft.No;
+            btnFact.Size = new System.Drawing.Size(85, 85);
+            btnFact.TabIndex = 31;
+            btnFact.Text = "n!";
+            btnFact.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnAbs
             // 
-            button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button9.Location = new System.Drawing.Point(688, 259);
-            button9.Margin = new Padding(4, 3, 4, 3);
-            button9.Name = "button9";
-            button9.Size = new System.Drawing.Size(82, 81);
-            button9.TabIndex = 30;
-            button9.Text = "/";
-            button9.UseVisualStyleBackColor = true;
+            btnAbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnAbs.Location = new System.Drawing.Point(604, 434);
+            btnAbs.Margin = new Padding(4, 3, 4, 3);
+            btnAbs.Name = "btnAbs";
+            btnAbs.RightToLeft = RightToLeft.No;
+            btnAbs.Size = new System.Drawing.Size(85, 85);
+            btnAbs.TabIndex = 40;
+            btnAbs.Text = "|x|";
+            btnAbs.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnLn
             // 
-            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button10.Location = new System.Drawing.Point(777, 259);
-            button10.Margin = new Padding(4, 3, 4, 3);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(82, 81);
-            button10.TabIndex = 31;
-            button10.Text = "/";
-            button10.UseVisualStyleBackColor = true;
+            btnLn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnLn.Location = new System.Drawing.Point(511, 434);
+            btnLn.Margin = new Padding(4, 3, 4, 3);
+            btnLn.Name = "btnLn";
+            btnLn.RightToLeft = RightToLeft.No;
+            btnLn.Size = new System.Drawing.Size(85, 85);
+            btnLn.TabIndex = 38;
+            btnLn.Text = "ln";
+            btnLn.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnLog
             // 
-            button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button11.Location = new System.Drawing.Point(777, 434);
-            button11.Margin = new Padding(4, 3, 4, 3);
-            button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(82, 81);
-            button11.TabIndex = 41;
-            button11.Text = "/";
-            button11.UseVisualStyleBackColor = true;
+            btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnLog.Location = new System.Drawing.Point(422, 434);
+            btnLog.Margin = new Padding(4, 3, 4, 3);
+            btnLog.Name = "btnLog";
+            btnLog.RightToLeft = RightToLeft.No;
+            btnLog.Size = new System.Drawing.Size(85, 85);
+            btnLog.TabIndex = 37;
+            btnLog.Text = "log";
+            btnLog.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnFloor
             // 
-            button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button12.Location = new System.Drawing.Point(688, 434);
-            button12.Margin = new Padding(4, 3, 4, 3);
-            button12.Name = "button12";
-            button12.Size = new System.Drawing.Size(82, 81);
-            button12.TabIndex = 40;
-            button12.Text = "/";
-            button12.UseVisualStyleBackColor = true;
+            btnFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnFloor.Location = new System.Drawing.Point(693, 347);
+            btnFloor.Margin = new Padding(4, 3, 4, 3);
+            btnFloor.Name = "btnFloor";
+            btnFloor.RightToLeft = RightToLeft.No;
+            btnFloor.Size = new System.Drawing.Size(85, 85);
+            btnFloor.TabIndex = 36;
+            btnFloor.Text = "floor";
+            btnFloor.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnCeil
             // 
-            button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button13.Location = new System.Drawing.Point(600, 434);
-            button13.Margin = new Padding(4, 3, 4, 3);
-            button13.Name = "button13";
-            button13.Size = new System.Drawing.Size(82, 81);
-            button13.TabIndex = 39;
-            button13.Text = "/";
-            button13.UseVisualStyleBackColor = true;
+            btnCeil.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCeil.Location = new System.Drawing.Point(604, 347);
+            btnCeil.Margin = new Padding(4, 3, 4, 3);
+            btnCeil.Name = "btnCeil";
+            btnCeil.RightToLeft = RightToLeft.No;
+            btnCeil.Size = new System.Drawing.Size(85, 85);
+            btnCeil.TabIndex = 35;
+            btnCeil.Text = "ceil";
+            btnCeil.UseVisualStyleBackColor = true;
+            btnCeil.Click += btnCeil_Click;
             // 
-            // button14
+            // btnCtg
             // 
-            button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button14.Location = new System.Drawing.Point(511, 434);
-            button14.Margin = new Padding(4, 3, 4, 3);
-            button14.Name = "button14";
-            button14.Size = new System.Drawing.Size(82, 81);
-            button14.TabIndex = 38;
-            button14.Text = "/";
-            button14.UseVisualStyleBackColor = true;
+            btnCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCtg.Location = new System.Drawing.Point(511, 347);
+            btnCtg.Margin = new Padding(4, 3, 4, 3);
+            btnCtg.Name = "btnCtg";
+            btnCtg.RightToLeft = RightToLeft.No;
+            btnCtg.Size = new System.Drawing.Size(85, 85);
+            btnCtg.TabIndex = 33;
+            btnCtg.Text = "ctg";
+            btnCtg.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // btnTg
             // 
-            button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button15.Location = new System.Drawing.Point(422, 434);
-            button15.Margin = new Padding(4, 3, 4, 3);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(82, 81);
-            button15.TabIndex = 37;
-            button15.Text = "/";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button16.Location = new System.Drawing.Point(777, 347);
-            button16.Margin = new Padding(4, 3, 4, 3);
-            button16.Name = "button16";
-            button16.Size = new System.Drawing.Size(82, 81);
-            button16.TabIndex = 36;
-            button16.Text = "/";
-            button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button17.Location = new System.Drawing.Point(688, 347);
-            button17.Margin = new Padding(4, 3, 4, 3);
-            button17.Name = "button17";
-            button17.Size = new System.Drawing.Size(82, 81);
-            button17.TabIndex = 35;
-            button17.Text = "/";
-            button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button18.Location = new System.Drawing.Point(600, 347);
-            button18.Margin = new Padding(4, 3, 4, 3);
-            button18.Name = "button18";
-            button18.Size = new System.Drawing.Size(82, 81);
-            button18.TabIndex = 34;
-            button18.Text = "/";
-            button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button19.Location = new System.Drawing.Point(511, 347);
-            button19.Margin = new Padding(4, 3, 4, 3);
-            button19.Name = "button19";
-            button19.Size = new System.Drawing.Size(82, 81);
-            button19.TabIndex = 33;
-            button19.Text = "/";
-            button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            button20.Location = new System.Drawing.Point(422, 347);
-            button20.Margin = new Padding(4, 3, 4, 3);
-            button20.Name = "button20";
-            button20.Size = new System.Drawing.Size(82, 81);
-            button20.TabIndex = 32;
-            button20.Text = "/";
-            button20.UseVisualStyleBackColor = true;
+            btnTg.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnTg.Location = new System.Drawing.Point(422, 347);
+            btnTg.Margin = new Padding(4, 3, 4, 3);
+            btnTg.Name = "btnTg";
+            btnTg.RightToLeft = RightToLeft.No;
+            btnTg.Size = new System.Drawing.Size(85, 85);
+            btnTg.TabIndex = 32;
+            btnTg.Text = "tg";
+            btnTg.UseVisualStyleBackColor = true;
             // 
             // txtTextField
             // 
@@ -546,8 +521,9 @@ namespace Calculator
             txtTextField.Multiline = true;
             txtTextField.Name = "txtTextField";
             txtTextField.ReadOnly = true;
+            txtTextField.RightToLeft = RightToLeft.No;
             txtTextField.ScrollBars = ScrollBars.Vertical;
-            txtTextField.Size = new System.Drawing.Size(847, 82);
+            txtTextField.Size = new System.Drawing.Size(764, 82);
             txtTextField.TabIndex = 42;
             txtTextField.TabStop = false;
             txtTextField.TextAlign = HorizontalAlignment.Right;
@@ -557,26 +533,21 @@ namespace Calculator
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(895, 627);
+            ClientSize = new System.Drawing.Size(812, 627);
             Controls.Add(txtTextField);
-            Controls.Add(button11);
-            Controls.Add(button12);
-            Controls.Add(button13);
-            Controls.Add(button14);
-            Controls.Add(button15);
-            Controls.Add(button16);
-            Controls.Add(button17);
-            Controls.Add(button18);
-            Controls.Add(button19);
-            Controls.Add(button20);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btnAbs);
+            Controls.Add(btnLn);
+            Controls.Add(btnLog);
+            Controls.Add(btnFloor);
+            Controls.Add(btnCeil);
+            Controls.Add(btnCtg);
+            Controls.Add(btnTg);
+            Controls.Add(btnFact);
+            Controls.Add(btnCos);
+            Controls.Add(btnSin);
+            Controls.Add(btnPi);
+            Controls.Add(btnE);
+            Controls.Add(btnPow);
             Controls.Add(btnRightBracket);
             Controls.Add(btnLeftBracket);
             Controls.Add(lbAnswer);
@@ -630,24 +601,19 @@ namespace Calculator
         private Label lbAnswer;
         private Button btnLeftBracket;
         private Button btnRightBracket;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Button button17;
-        private Button button18;
-        private Button button19;
-        private Button button20;
+        private Button btnPow;
+        private Button btnE;
+        private Button btnPi;
+        private Button btnSin;
+        private Button btnCos;
+        private Button btnFact;
+        private Button btnAbs;
+        private Button btnLn;
+        private Button btnLog;
+        private Button btnFloor;
+        private Button btnCeil;
+        private Button btnCtg;
+        private Button btnTg;
         private TextBox txtTextField;
     }
 }
