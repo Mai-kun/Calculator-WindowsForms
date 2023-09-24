@@ -37,13 +37,25 @@ namespace Calculator
         private void btnDelete_Click(object sender, EventArgs e) => lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
 
 
-        private bool IsMathemaicalSignOrComma(string formula)
+        private bool IsMathematicalSignOrComma(string formula)
         {
             if (formula[formula.Length - 1] == '/' ||
                 formula[formula.Length - 1] == '*' ||
                 formula[formula.Length - 1] == '-' ||
                 formula[formula.Length - 1] == '+' ||
                 formula[formula.Length - 1] == ',')
+            {
+                return true;
+            }
+            else return false;
+        }
+        private bool IsMathematicalSignOrComma(char charFromFormula)
+        {
+            if (charFromFormula == '/' ||
+                charFromFormula == '*' ||
+                charFromFormula == '-' ||
+                charFromFormula == '+' ||
+                charFromFormula == ',')
             {
                 return true;
             }
@@ -56,7 +68,7 @@ namespace Calculator
         {
             if (lbTextField.Text != "")
             {
-                if (IsMathemaicalSignOrComma(lbTextField.Text))
+                if (IsMathematicalSignOrComma(lbTextField.Text))
                     lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
                     
                 lbTextField.Text += '/';
@@ -67,7 +79,7 @@ namespace Calculator
         {
             if (lbTextField.Text != "")
             {
-                if (IsMathemaicalSignOrComma(lbTextField.Text))
+                if (IsMathematicalSignOrComma(lbTextField.Text))
                     lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
 
                 lbTextField.Text += '*';
@@ -78,7 +90,7 @@ namespace Calculator
         {
             if (lbTextField.Text != "")
             {
-                if (IsMathemaicalSignOrComma(lbTextField.Text))
+                if (IsMathematicalSignOrComma(lbTextField.Text))
                     lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
 
                 lbTextField.Text += '-';
@@ -89,7 +101,7 @@ namespace Calculator
         {
             if (lbTextField.Text != "")
             {
-                if (IsMathemaicalSignOrComma(lbTextField.Text))
+                if (IsMathematicalSignOrComma(lbTextField.Text))
                     lbTextField.Text = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
 
                 lbTextField.Text += '+';
@@ -140,30 +152,54 @@ namespace Calculator
         
         private void btnAnswer_Click(object sender, EventArgs e)
         {
-            lbTextField.Text = lbAnswer.Text;
-            lbAnswer.Text = "";
+            try
+            {
+                lbAnswer.Text = new DataTable().Compute(lbTextField.Text.Replace(",", "."), null).ToString();
+                lbTextField.Text = lbAnswer.Text;
+                lbAnswer.Text = "";
+            }
+            catch (Exception)
+            {
+                lbAnswer.Text = "Error";
+                lbTextField.Text = "";
+            }
         }
 
         private void lbTextField_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lbTextField.Text))
             {
-                if (IsMathemaicalSignOrComma(lbTextField.Text))
+                string StringForCheck = lbTextField.Text;
+                try
                 {
-                    string StringWithoutLastSign = lbTextField.Text.Remove(lbTextField.Text.Length - 1);
-                    lbAnswer.Text = new DataTable().Compute(StringWithoutLastSign.Replace(",", "."), null).ToString();
+                    lbAnswer.Text = new DataTable().Compute(StringForCheck.Replace(",", "."), null).ToString();
                 }
-                else
-                {
-                    lbAnswer.Text = new DataTable().Compute(lbTextField.Text.Replace(",", "."), null).ToString();
-                }
+                catch { }
             }
         }
+
+
+        private void btnLeftBracket_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsMathematicalSignOrComma(lbTextField.Text))
+                {
+                    lbTextField.Text += '*';
+                }
+            }
+            catch { }
+
+            lbTextField.Text += "(";
+        }
+
+        private void btnRightBracket_Click(object sender, EventArgs e) => lbTextField.Text += ")";
+
     }
 }
 
-//TODO: Ошибки:
-//TODO: Ограничить ввод чисел для строки
-
-
+//TODO Обработать случай мат. символа и скобки    *)
+//TODO Обработать случай мат. символа и скобки    (5-6*)
+//TODO Обработать случай мат. символа и скобки    5-6)
+//TODO Обработать случай                          ()
 
