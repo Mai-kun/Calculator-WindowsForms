@@ -34,33 +34,24 @@ namespace Calculator
         private void btn9_Click(object sender, EventArgs e) => txtTextField.Text += "9";
 
 
-        private void btnDelete_Click(object sender, EventArgs e) => txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
-
-
-        private static bool IsMathematicalSignOrComma(string formula)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (formula[^1] == '/' ||
-                formula[^1] == '*' ||
-                formula[^1] == '-' ||
-                formula[^1] == '+' ||
-                formula[^1] == ',')
+            try { txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1); }
+            catch { }
+        }
+
+        private static bool IsMathematicalSignOrComma(char formula)
+        {
+            if (formula == '/' ||
+                formula == '*' ||
+                formula == '-' ||
+                formula == '+' ||
+                formula == ',')
             {
                 return true;
             }
             else return false;
         }
-        //private static bool IsMathematicalSignOrComma(char charFromFormula)
-        //{
-        //    if (charFromFormula == '/' ||
-        //        charFromFormula == '*' ||
-        //        charFromFormula == '-' ||
-        //        charFromFormula == '+' ||
-        //        charFromFormula == ',')
-        //    {
-        //        return true;
-        //    }
-        //    else return false;
-        //}
 
         private void btnComma_Click(object sender, EventArgs e) => txtTextField.Text += ",";
 
@@ -68,7 +59,7 @@ namespace Calculator
         {
             if (txtTextField.Text != "")
             {
-                if (IsMathematicalSignOrComma(txtTextField.Text))
+                if (IsMathematicalSignOrComma(txtTextField.Text[^1]))
                     txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
 
                 txtTextField.Text += '/';
@@ -79,7 +70,7 @@ namespace Calculator
         {
             if (txtTextField.Text != "")
             {
-                if (IsMathematicalSignOrComma(txtTextField.Text))
+                if (IsMathematicalSignOrComma(txtTextField.Text[^1]))
                     txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
 
                 txtTextField.Text += '*';
@@ -90,7 +81,7 @@ namespace Calculator
         {
             if (txtTextField.Text != "")
             {
-                if (IsMathematicalSignOrComma(txtTextField.Text))
+                if (IsMathematicalSignOrComma(txtTextField.Text[^1]))
                     txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
 
                 txtTextField.Text += '-';
@@ -101,7 +92,7 @@ namespace Calculator
         {
             if (txtTextField.Text != "")
             {
-                if (IsMathematicalSignOrComma(txtTextField.Text))
+                if (IsMathematicalSignOrComma(txtTextField.Text[^1]))
                     txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
 
                 txtTextField.Text += '+';
@@ -154,8 +145,7 @@ namespace Calculator
         {
             try
             {
-                lbAnswer.Text = new DataTable().Compute(txtTextField.Text.Replace(",", "."), null).ToString();
-                txtTextField.Text = lbAnswer.Text;
+                txtTextField.Text = CalculatorWithParser.Calc(txtTextField.Text.Replace(",", ".")).ToString(); ;
                 lbAnswer.Text = "";
             }
             catch (Exception)
@@ -172,7 +162,10 @@ namespace Calculator
                 string StringForCheck = txtTextField.Text;
                 try
                 {
-                    lbAnswer.Text = new DataTable().Compute(StringForCheck.Replace(",", "."), null).ToString();
+                    if (!IsMathematicalSignOrComma(StringForCheck[^1]))
+                    {
+                        lbAnswer.Text = CalculatorWithParser.Calc(txtTextField.Text).ToString();
+                    }
                 }
                 catch { }
             }
@@ -183,7 +176,7 @@ namespace Calculator
         {
             try
             {
-                if (!IsMathematicalSignOrComma(txtTextField.Text))
+                if (!IsMathematicalSignOrComma(txtTextField.Text[^1]))
                 {
                     txtTextField.Text += '*';
                 }

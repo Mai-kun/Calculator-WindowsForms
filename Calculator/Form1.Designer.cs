@@ -61,11 +61,12 @@ namespace Calculator
             btnAbs = new Button();
             btnLn = new Button();
             btnLog = new Button();
-            btnFloor = new Button();
-            btnCeil = new Button();
+            btnCsc = new Button();
+            btnSec = new Button();
             btnCtg = new Button();
             btnTg = new Button();
             txtTextField = new TextBox();
+            btnExp = new Button();
             SuspendLayout();
             // 
             // btn7
@@ -462,30 +463,30 @@ namespace Calculator
             btnLog.Text = "log";
             btnLog.UseVisualStyleBackColor = true;
             // 
-            // btnFloor
+            // btnCsc
             // 
-            btnFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnFloor.Location = new System.Drawing.Point(693, 347);
-            btnFloor.Margin = new Padding(4, 3, 4, 3);
-            btnFloor.Name = "btnFloor";
-            btnFloor.RightToLeft = RightToLeft.No;
-            btnFloor.Size = new System.Drawing.Size(85, 85);
-            btnFloor.TabIndex = 36;
-            btnFloor.Text = "floor";
-            btnFloor.UseVisualStyleBackColor = true;
+            btnCsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCsc.Location = new System.Drawing.Point(693, 347);
+            btnCsc.Margin = new Padding(4, 3, 4, 3);
+            btnCsc.Name = "btnCsc";
+            btnCsc.RightToLeft = RightToLeft.No;
+            btnCsc.Size = new System.Drawing.Size(85, 85);
+            btnCsc.TabIndex = 36;
+            btnCsc.Text = "csc";
+            btnCsc.UseVisualStyleBackColor = true;
             // 
-            // btnCeil
+            // btnSec
             // 
-            btnCeil.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnCeil.Location = new System.Drawing.Point(604, 347);
-            btnCeil.Margin = new Padding(4, 3, 4, 3);
-            btnCeil.Name = "btnCeil";
-            btnCeil.RightToLeft = RightToLeft.No;
-            btnCeil.Size = new System.Drawing.Size(85, 85);
-            btnCeil.TabIndex = 35;
-            btnCeil.Text = "ceil";
-            btnCeil.UseVisualStyleBackColor = true;
-            btnCeil.Click += btnCeil_Click;
+            btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSec.Location = new System.Drawing.Point(604, 347);
+            btnSec.Margin = new Padding(4, 3, 4, 3);
+            btnSec.Name = "btnSec";
+            btnSec.RightToLeft = RightToLeft.No;
+            btnSec.Size = new System.Drawing.Size(85, 85);
+            btnSec.TabIndex = 35;
+            btnSec.Text = "sec";
+            btnSec.UseVisualStyleBackColor = true;
+            btnSec.Click += btnCeil_Click;
             // 
             // btnCtg
             // 
@@ -529,17 +530,30 @@ namespace Calculator
             txtTextField.TextAlign = HorizontalAlignment.Right;
             txtTextField.TextChanged += txtTextField_TextChanged;
             // 
+            // btnExp
+            // 
+            btnExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnExp.Location = new System.Drawing.Point(693, 434);
+            btnExp.Margin = new Padding(4, 3, 4, 3);
+            btnExp.Name = "btnExp";
+            btnExp.RightToLeft = RightToLeft.No;
+            btnExp.Size = new System.Drawing.Size(85, 85);
+            btnExp.TabIndex = 43;
+            btnExp.Text = "exp";
+            btnExp.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(812, 627);
+            Controls.Add(btnExp);
             Controls.Add(txtTextField);
             Controls.Add(btnAbs);
             Controls.Add(btnLn);
             Controls.Add(btnLog);
-            Controls.Add(btnFloor);
-            Controls.Add(btnCeil);
+            Controls.Add(btnCsc);
+            Controls.Add(btnSec);
             Controls.Add(btnCtg);
             Controls.Add(btnTg);
             Controls.Add(btnFact);
@@ -610,11 +624,12 @@ namespace Calculator
         private Button btnAbs;
         private Button btnLn;
         private Button btnLog;
-        private Button btnFloor;
-        private Button btnCeil;
+        private Button btnCsc;
+        private Button btnSec;
         private Button btnCtg;
         private Button btnTg;
         private TextBox txtTextField;
+        private Button btnExp;
     }
 }
 
