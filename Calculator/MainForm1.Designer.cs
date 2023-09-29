@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    partial class Form1
+    partial class MainForm1
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -67,16 +67,22 @@ namespace Calculator
             btnTg = new Button();
             txtTextField = new TextBox();
             btnExp = new Button();
+            tabControl1 = new TabControl();
+            tabcCalc = new TabPage();
+            btnHistory = new Button();
+            tabPage1 = new TabPage();
+            tabControl1.SuspendLayout();
+            tabcCalc.SuspendLayout();
             SuspendLayout();
             // 
             // btn7
             // 
-            btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn7.Location = new System.Drawing.Point(30, 259);
+            btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn7.Location = new System.Drawing.Point(19, 218);
             btn7.Margin = new Padding(4, 3, 4, 3);
             btn7.Name = "btn7";
             btn7.RightToLeft = RightToLeft.No;
-            btn7.Size = new System.Drawing.Size(85, 85);
+            btn7.Size = new System.Drawing.Size(60, 60);
             btn7.TabIndex = 1;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
@@ -84,12 +90,12 @@ namespace Calculator
             // 
             // btn8
             // 
-            btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn8.Location = new System.Drawing.Point(119, 259);
+            btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn8.Location = new System.Drawing.Point(83, 218);
             btn8.Margin = new Padding(4, 3, 4, 3);
             btn8.Name = "btn8";
             btn8.RightToLeft = RightToLeft.No;
-            btn8.Size = new System.Drawing.Size(85, 85);
+            btn8.Size = new System.Drawing.Size(60, 60);
             btn8.TabIndex = 2;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
@@ -97,12 +103,12 @@ namespace Calculator
             // 
             // btn9
             // 
-            btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn9.Location = new System.Drawing.Point(208, 259);
+            btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn9.Location = new System.Drawing.Point(148, 218);
             btn9.Margin = new Padding(4, 3, 4, 3);
             btn9.Name = "btn9";
             btn9.RightToLeft = RightToLeft.No;
-            btn9.Size = new System.Drawing.Size(85, 85);
+            btn9.Size = new System.Drawing.Size(60, 60);
             btn9.TabIndex = 3;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
@@ -110,12 +116,12 @@ namespace Calculator
             // 
             // btn4
             // 
-            btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn4.Location = new System.Drawing.Point(30, 347);
+            btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn4.Location = new System.Drawing.Point(19, 284);
             btn4.Margin = new Padding(4, 3, 4, 3);
             btn4.Name = "btn4";
             btn4.RightToLeft = RightToLeft.No;
-            btn4.Size = new System.Drawing.Size(85, 85);
+            btn4.Size = new System.Drawing.Size(60, 60);
             btn4.TabIndex = 4;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
@@ -123,12 +129,12 @@ namespace Calculator
             // 
             // btn5
             // 
-            btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn5.Location = new System.Drawing.Point(119, 347);
+            btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn5.Location = new System.Drawing.Point(83, 284);
             btn5.Margin = new Padding(4, 3, 4, 3);
             btn5.Name = "btn5";
             btn5.RightToLeft = RightToLeft.No;
-            btn5.Size = new System.Drawing.Size(85, 85);
+            btn5.Size = new System.Drawing.Size(60, 60);
             btn5.TabIndex = 5;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
@@ -136,12 +142,12 @@ namespace Calculator
             // 
             // btn6
             // 
-            btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn6.Location = new System.Drawing.Point(208, 347);
+            btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn6.Location = new System.Drawing.Point(148, 284);
             btn6.Margin = new Padding(4, 3, 4, 3);
             btn6.Name = "btn6";
             btn6.RightToLeft = RightToLeft.No;
-            btn6.Size = new System.Drawing.Size(85, 85);
+            btn6.Size = new System.Drawing.Size(60, 60);
             btn6.TabIndex = 6;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
@@ -149,12 +155,12 @@ namespace Calculator
             // 
             // btn1
             // 
-            btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn1.Location = new System.Drawing.Point(30, 434);
+            btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn1.Location = new System.Drawing.Point(19, 350);
             btn1.Margin = new Padding(4, 3, 4, 3);
             btn1.Name = "btn1";
             btn1.RightToLeft = RightToLeft.No;
-            btn1.Size = new System.Drawing.Size(85, 85);
+            btn1.Size = new System.Drawing.Size(60, 60);
             btn1.TabIndex = 7;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
@@ -162,12 +168,12 @@ namespace Calculator
             // 
             // btn2
             // 
-            btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn2.Location = new System.Drawing.Point(119, 434);
+            btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn2.Location = new System.Drawing.Point(83, 350);
             btn2.Margin = new Padding(4, 3, 4, 3);
             btn2.Name = "btn2";
             btn2.RightToLeft = RightToLeft.No;
-            btn2.Size = new System.Drawing.Size(85, 85);
+            btn2.Size = new System.Drawing.Size(60, 60);
             btn2.TabIndex = 8;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
@@ -175,12 +181,12 @@ namespace Calculator
             // 
             // btn3
             // 
-            btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn3.Location = new System.Drawing.Point(208, 434);
+            btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn3.Location = new System.Drawing.Point(148, 350);
             btn3.Margin = new Padding(4, 3, 4, 3);
             btn3.Name = "btn3";
             btn3.RightToLeft = RightToLeft.No;
-            btn3.Size = new System.Drawing.Size(85, 85);
+            btn3.Size = new System.Drawing.Size(60, 60);
             btn3.TabIndex = 9;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
@@ -188,12 +194,12 @@ namespace Calculator
             // 
             // btn0
             // 
-            btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn0.Location = new System.Drawing.Point(119, 522);
+            btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn0.Location = new System.Drawing.Point(83, 416);
             btn0.Margin = new Padding(4, 3, 4, 3);
             btn0.Name = "btn0";
             btn0.RightToLeft = RightToLeft.No;
-            btn0.Size = new System.Drawing.Size(85, 85);
+            btn0.Size = new System.Drawing.Size(60, 60);
             btn0.TabIndex = 10;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
@@ -201,12 +207,12 @@ namespace Calculator
             // 
             // btnDevide
             // 
-            btnDevide.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnDevide.Location = new System.Drawing.Point(315, 171);
+            btnDevide.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnDevide.Location = new System.Drawing.Point(218, 152);
             btnDevide.Margin = new Padding(4, 3, 4, 3);
             btnDevide.Name = "btnDevide";
             btnDevide.RightToLeft = RightToLeft.No;
-            btnDevide.Size = new System.Drawing.Size(85, 85);
+            btnDevide.Size = new System.Drawing.Size(60, 60);
             btnDevide.TabIndex = 11;
             btnDevide.Text = "/";
             btnDevide.UseVisualStyleBackColor = true;
@@ -214,12 +220,12 @@ namespace Calculator
             // 
             // btnMultipli
             // 
-            btnMultipli.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnMultipli.Location = new System.Drawing.Point(315, 259);
+            btnMultipli.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMultipli.Location = new System.Drawing.Point(218, 218);
             btnMultipli.Margin = new Padding(4, 3, 4, 3);
             btnMultipli.Name = "btnMultipli";
             btnMultipli.RightToLeft = RightToLeft.No;
-            btnMultipli.Size = new System.Drawing.Size(85, 85);
+            btnMultipli.Size = new System.Drawing.Size(60, 60);
             btnMultipli.TabIndex = 12;
             btnMultipli.Text = "x";
             btnMultipli.UseVisualStyleBackColor = true;
@@ -227,12 +233,12 @@ namespace Calculator
             // 
             // btnMinus
             // 
-            btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnMinus.Location = new System.Drawing.Point(315, 347);
+            btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMinus.Location = new System.Drawing.Point(218, 284);
             btnMinus.Margin = new Padding(4, 3, 4, 3);
             btnMinus.Name = "btnMinus";
             btnMinus.RightToLeft = RightToLeft.No;
-            btnMinus.Size = new System.Drawing.Size(85, 85);
+            btnMinus.Size = new System.Drawing.Size(60, 60);
             btnMinus.TabIndex = 13;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
@@ -240,12 +246,12 @@ namespace Calculator
             // 
             // btnPlus
             // 
-            btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnPlus.Location = new System.Drawing.Point(315, 434);
+            btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPlus.Location = new System.Drawing.Point(218, 350);
             btnPlus.Margin = new Padding(4, 3, 4, 3);
             btnPlus.Name = "btnPlus";
             btnPlus.RightToLeft = RightToLeft.No;
-            btnPlus.Size = new System.Drawing.Size(85, 85);
+            btnPlus.Size = new System.Drawing.Size(60, 60);
             btnPlus.TabIndex = 14;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
@@ -253,12 +259,12 @@ namespace Calculator
             // 
             // btnAnswer
             // 
-            btnAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnAnswer.Location = new System.Drawing.Point(315, 522);
+            btnAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnAnswer.Location = new System.Drawing.Point(218, 416);
             btnAnswer.Margin = new Padding(4, 3, 4, 3);
             btnAnswer.Name = "btnAnswer";
             btnAnswer.RightToLeft = RightToLeft.No;
-            btnAnswer.Size = new System.Drawing.Size(85, 85);
+            btnAnswer.Size = new System.Drawing.Size(60, 60);
             btnAnswer.TabIndex = 15;
             btnAnswer.Text = "=";
             btnAnswer.UseVisualStyleBackColor = true;
@@ -266,12 +272,12 @@ namespace Calculator
             // 
             // btnComma
             // 
-            btnComma.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnComma.Location = new System.Drawing.Point(208, 522);
+            btnComma.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnComma.Location = new System.Drawing.Point(148, 416);
             btnComma.Margin = new Padding(4, 3, 4, 3);
             btnComma.Name = "btnComma";
             btnComma.RightToLeft = RightToLeft.No;
-            btnComma.Size = new System.Drawing.Size(85, 85);
+            btnComma.Size = new System.Drawing.Size(60, 60);
             btnComma.TabIndex = 16;
             btnComma.Text = ",";
             btnComma.UseVisualStyleBackColor = true;
@@ -279,25 +285,25 @@ namespace Calculator
             // 
             // btnClean
             // 
-            btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnClean.Location = new System.Drawing.Point(30, 171);
+            btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnClean.Location = new System.Drawing.Point(19, 152);
             btnClean.Margin = new Padding(4, 3, 4, 3);
             btnClean.Name = "btnClean";
             btnClean.RightToLeft = RightToLeft.No;
-            btnClean.Size = new System.Drawing.Size(85, 85);
+            btnClean.Size = new System.Drawing.Size(60, 60);
             btnClean.TabIndex = 17;
-            btnClean.Text = "C";
+            btnClean.Text = "CE";
             btnClean.UseVisualStyleBackColor = true;
             btnClean.Click += btnClean_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnDelete.Location = new System.Drawing.Point(119, 171);
+            btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnDelete.Location = new System.Drawing.Point(83, 152);
             btnDelete.Margin = new Padding(4, 3, 4, 3);
             btnDelete.Name = "btnDelete";
             btnDelete.RightToLeft = RightToLeft.No;
-            btnDelete.Size = new System.Drawing.Size(85, 85);
+            btnDelete.Size = new System.Drawing.Size(60, 60);
             btnDelete.TabIndex = 18;
             btnDelete.Text = "<=";
             btnDelete.UseVisualStyleBackColor = true;
@@ -305,12 +311,12 @@ namespace Calculator
             // 
             // btnPercent
             // 
-            btnPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnPercent.Location = new System.Drawing.Point(208, 171);
+            btnPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPercent.Location = new System.Drawing.Point(148, 152);
             btnPercent.Margin = new Padding(4, 3, 4, 3);
             btnPercent.Name = "btnPercent";
             btnPercent.RightToLeft = RightToLeft.No;
-            btnPercent.Size = new System.Drawing.Size(85, 85);
+            btnPercent.Size = new System.Drawing.Size(60, 60);
             btnPercent.TabIndex = 19;
             btnPercent.Text = "%";
             btnPercent.UseVisualStyleBackColor = true;
@@ -322,21 +328,21 @@ namespace Calculator
             lbAnswer.BorderStyle = BorderStyle.FixedSingle;
             lbAnswer.Enabled = false;
             lbAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            lbAnswer.Location = new System.Drawing.Point(30, 106);
+            lbAnswer.Location = new System.Drawing.Point(19, 94);
             lbAnswer.Margin = new Padding(4, 0, 4, 0);
             lbAnswer.Name = "lbAnswer";
-            lbAnswer.Size = new System.Drawing.Size(747, 55);
+            lbAnswer.Size = new System.Drawing.Size(532, 55);
             lbAnswer.TabIndex = 21;
             lbAnswer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnLeftBracket
             // 
-            btnLeftBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnLeftBracket.Location = new System.Drawing.Point(422, 171);
+            btnLeftBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnLeftBracket.Location = new System.Drawing.Point(287, 152);
             btnLeftBracket.Margin = new Padding(4, 3, 4, 3);
             btnLeftBracket.Name = "btnLeftBracket";
             btnLeftBracket.RightToLeft = RightToLeft.No;
-            btnLeftBracket.Size = new System.Drawing.Size(85, 85);
+            btnLeftBracket.Size = new System.Drawing.Size(60, 60);
             btnLeftBracket.TabIndex = 22;
             btnLeftBracket.Text = "(";
             btnLeftBracket.UseVisualStyleBackColor = true;
@@ -344,12 +350,12 @@ namespace Calculator
             // 
             // btnRightBracket
             // 
-            btnRightBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnRightBracket.Location = new System.Drawing.Point(511, 171);
+            btnRightBracket.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnRightBracket.Location = new System.Drawing.Point(355, 152);
             btnRightBracket.Margin = new Padding(4, 3, 4, 3);
             btnRightBracket.Name = "btnRightBracket";
             btnRightBracket.RightToLeft = RightToLeft.No;
-            btnRightBracket.Size = new System.Drawing.Size(85, 85);
+            btnRightBracket.Size = new System.Drawing.Size(60, 60);
             btnRightBracket.TabIndex = 23;
             btnRightBracket.Text = ")";
             btnRightBracket.UseVisualStyleBackColor = true;
@@ -357,160 +363,170 @@ namespace Calculator
             // 
             // btnPow
             // 
-            btnPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnPow.Location = new System.Drawing.Point(604, 259);
+            btnPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPow.Location = new System.Drawing.Point(423, 218);
             btnPow.Margin = new Padding(4, 3, 4, 3);
             btnPow.Name = "btnPow";
             btnPow.RightToLeft = RightToLeft.No;
-            btnPow.Size = new System.Drawing.Size(85, 85);
+            btnPow.Size = new System.Drawing.Size(60, 60);
             btnPow.TabIndex = 24;
             btnPow.Text = "x^y\r\n";
             btnPow.UseVisualStyleBackColor = true;
+            btnPow.Click += btnPow_Click;
             // 
             // btnE
             // 
-            btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnE.Location = new System.Drawing.Point(604, 171);
+            btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnE.Location = new System.Drawing.Point(423, 152);
             btnE.Margin = new Padding(4, 3, 4, 3);
             btnE.Name = "btnE";
             btnE.RightToLeft = RightToLeft.No;
-            btnE.Size = new System.Drawing.Size(85, 85);
+            btnE.Size = new System.Drawing.Size(60, 60);
             btnE.TabIndex = 25;
             btnE.Text = "e";
             btnE.UseVisualStyleBackColor = true;
             // 
             // btnPi
             // 
-            btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnPi.Location = new System.Drawing.Point(693, 171);
+            btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnPi.Location = new System.Drawing.Point(491, 152);
             btnPi.Margin = new Padding(4, 3, 4, 3);
             btnPi.Name = "btnPi";
             btnPi.RightToLeft = RightToLeft.No;
-            btnPi.Size = new System.Drawing.Size(85, 85);
+            btnPi.Size = new System.Drawing.Size(60, 60);
             btnPi.TabIndex = 26;
             btnPi.Text = "Pi";
             btnPi.UseVisualStyleBackColor = true;
             // 
             // btnSin
             // 
-            btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnSin.Location = new System.Drawing.Point(422, 259);
+            btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSin.Location = new System.Drawing.Point(287, 218);
             btnSin.Margin = new Padding(4, 3, 4, 3);
             btnSin.Name = "btnSin";
             btnSin.RightToLeft = RightToLeft.No;
-            btnSin.Size = new System.Drawing.Size(85, 85);
+            btnSin.Size = new System.Drawing.Size(60, 60);
             btnSin.TabIndex = 27;
             btnSin.Text = "sin";
             btnSin.UseVisualStyleBackColor = true;
+            btnSin.Click += btnSin_Click;
             // 
             // btnCos
             // 
-            btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnCos.Location = new System.Drawing.Point(511, 259);
+            btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCos.Location = new System.Drawing.Point(355, 218);
             btnCos.Margin = new Padding(4, 3, 4, 3);
             btnCos.Name = "btnCos";
             btnCos.RightToLeft = RightToLeft.No;
-            btnCos.Size = new System.Drawing.Size(85, 85);
+            btnCos.Size = new System.Drawing.Size(60, 60);
             btnCos.TabIndex = 28;
             btnCos.Text = "cos";
             btnCos.UseVisualStyleBackColor = true;
+            btnCos.Click += btnCos_Click;
             // 
             // btnFact
             // 
-            btnFact.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnFact.Location = new System.Drawing.Point(693, 259);
+            btnFact.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnFact.Location = new System.Drawing.Point(491, 218);
             btnFact.Margin = new Padding(4, 3, 4, 3);
             btnFact.Name = "btnFact";
             btnFact.RightToLeft = RightToLeft.No;
-            btnFact.Size = new System.Drawing.Size(85, 85);
+            btnFact.Size = new System.Drawing.Size(60, 60);
             btnFact.TabIndex = 31;
             btnFact.Text = "n!";
             btnFact.UseVisualStyleBackColor = true;
+            btnFact.Click += btnFact_Click;
             // 
             // btnAbs
             // 
-            btnAbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnAbs.Location = new System.Drawing.Point(604, 434);
+            btnAbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnAbs.Location = new System.Drawing.Point(423, 350);
             btnAbs.Margin = new Padding(4, 3, 4, 3);
             btnAbs.Name = "btnAbs";
             btnAbs.RightToLeft = RightToLeft.No;
-            btnAbs.Size = new System.Drawing.Size(85, 85);
+            btnAbs.Size = new System.Drawing.Size(60, 60);
             btnAbs.TabIndex = 40;
             btnAbs.Text = "|x|";
             btnAbs.UseVisualStyleBackColor = true;
+            btnAbs.Click += btnAbs_Click;
             // 
             // btnLn
             // 
-            btnLn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnLn.Location = new System.Drawing.Point(511, 434);
+            btnLn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnLn.Location = new System.Drawing.Point(355, 350);
             btnLn.Margin = new Padding(4, 3, 4, 3);
             btnLn.Name = "btnLn";
             btnLn.RightToLeft = RightToLeft.No;
-            btnLn.Size = new System.Drawing.Size(85, 85);
+            btnLn.Size = new System.Drawing.Size(60, 60);
             btnLn.TabIndex = 38;
             btnLn.Text = "ln";
             btnLn.UseVisualStyleBackColor = true;
+            btnLn.Click += btnLn_Click;
             // 
             // btnLog
             // 
-            btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnLog.Location = new System.Drawing.Point(422, 434);
+            btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnLog.Location = new System.Drawing.Point(287, 350);
             btnLog.Margin = new Padding(4, 3, 4, 3);
             btnLog.Name = "btnLog";
             btnLog.RightToLeft = RightToLeft.No;
-            btnLog.Size = new System.Drawing.Size(85, 85);
+            btnLog.Size = new System.Drawing.Size(60, 60);
             btnLog.TabIndex = 37;
             btnLog.Text = "log";
             btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click;
             // 
             // btnCsc
             // 
-            btnCsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnCsc.Location = new System.Drawing.Point(693, 347);
+            btnCsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCsc.Location = new System.Drawing.Point(491, 284);
             btnCsc.Margin = new Padding(4, 3, 4, 3);
             btnCsc.Name = "btnCsc";
             btnCsc.RightToLeft = RightToLeft.No;
-            btnCsc.Size = new System.Drawing.Size(85, 85);
+            btnCsc.Size = new System.Drawing.Size(60, 60);
             btnCsc.TabIndex = 36;
             btnCsc.Text = "csc";
             btnCsc.UseVisualStyleBackColor = true;
+            btnCsc.Click += btnCsc_Click;
             // 
             // btnSec
             // 
-            btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnSec.Location = new System.Drawing.Point(604, 347);
+            btnSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnSec.Location = new System.Drawing.Point(423, 284);
             btnSec.Margin = new Padding(4, 3, 4, 3);
             btnSec.Name = "btnSec";
             btnSec.RightToLeft = RightToLeft.No;
-            btnSec.Size = new System.Drawing.Size(85, 85);
+            btnSec.Size = new System.Drawing.Size(60, 60);
             btnSec.TabIndex = 35;
             btnSec.Text = "sec";
             btnSec.UseVisualStyleBackColor = true;
-            btnSec.Click += btnCeil_Click;
+            btnSec.Click += btnSec_Click;
             // 
             // btnCtg
             // 
-            btnCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnCtg.Location = new System.Drawing.Point(511, 347);
+            btnCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnCtg.Location = new System.Drawing.Point(355, 284);
             btnCtg.Margin = new Padding(4, 3, 4, 3);
             btnCtg.Name = "btnCtg";
             btnCtg.RightToLeft = RightToLeft.No;
-            btnCtg.Size = new System.Drawing.Size(85, 85);
+            btnCtg.Size = new System.Drawing.Size(60, 60);
             btnCtg.TabIndex = 33;
             btnCtg.Text = "ctg";
             btnCtg.UseVisualStyleBackColor = true;
+            btnCtg.Click += btnCtg_Click;
             // 
             // btnTg
             // 
-            btnTg.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnTg.Location = new System.Drawing.Point(422, 347);
+            btnTg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnTg.Location = new System.Drawing.Point(287, 284);
             btnTg.Margin = new Padding(4, 3, 4, 3);
             btnTg.Name = "btnTg";
             btnTg.RightToLeft = RightToLeft.No;
-            btnTg.Size = new System.Drawing.Size(85, 85);
+            btnTg.Size = new System.Drawing.Size(60, 60);
             btnTg.TabIndex = 32;
             btnTg.Text = "tg";
             btnTg.UseVisualStyleBackColor = true;
+            btnTg.Click += btnTg_Click;
             // 
             // txtTextField
             // 
@@ -518,13 +534,13 @@ namespace Calculator
             txtTextField.BorderStyle = BorderStyle.FixedSingle;
             txtTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtTextField.ForeColor = System.Drawing.Color.Black;
-            txtTextField.Location = new System.Drawing.Point(30, 21);
+            txtTextField.Location = new System.Drawing.Point(19, 9);
             txtTextField.Multiline = true;
             txtTextField.Name = "txtTextField";
             txtTextField.ReadOnly = true;
             txtTextField.RightToLeft = RightToLeft.No;
             txtTextField.ScrollBars = ScrollBars.Vertical;
-            txtTextField.Size = new System.Drawing.Size(764, 82);
+            txtTextField.Size = new System.Drawing.Size(549, 82);
             txtTextField.TabIndex = 42;
             txtTextField.TabStop = false;
             txtTextField.TextAlign = HorizontalAlignment.Right;
@@ -532,64 +548,113 @@ namespace Calculator
             // 
             // btnExp
             // 
-            btnExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btnExp.Location = new System.Drawing.Point(693, 434);
+            btnExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnExp.Location = new System.Drawing.Point(491, 350);
             btnExp.Margin = new Padding(4, 3, 4, 3);
             btnExp.Name = "btnExp";
             btnExp.RightToLeft = RightToLeft.No;
-            btnExp.Size = new System.Drawing.Size(85, 85);
+            btnExp.Size = new System.Drawing.Size(60, 60);
             btnExp.TabIndex = 43;
             btnExp.Text = "exp";
             btnExp.UseVisualStyleBackColor = true;
+            btnExp.Click += btnExp_Click;
             // 
-            // Form1
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabcCalc);
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            tabControl1.Location = new System.Drawing.Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(586, 525);
+            tabControl1.TabIndex = 44;
+            // 
+            // tabcCalc
+            // 
+            tabcCalc.Controls.Add(btnHistory);
+            tabcCalc.Controls.Add(btnExp);
+            tabcCalc.Controls.Add(txtTextField);
+            tabcCalc.Controls.Add(btnAbs);
+            tabcCalc.Controls.Add(lbAnswer);
+            tabcCalc.Controls.Add(btnLn);
+            tabcCalc.Controls.Add(btnLeftBracket);
+            tabcCalc.Controls.Add(btnLog);
+            tabcCalc.Controls.Add(btn7);
+            tabcCalc.Controls.Add(btnCsc);
+            tabcCalc.Controls.Add(btn8);
+            tabcCalc.Controls.Add(btnSec);
+            tabcCalc.Controls.Add(btn9);
+            tabcCalc.Controls.Add(btnCtg);
+            tabcCalc.Controls.Add(btn4);
+            tabcCalc.Controls.Add(btnTg);
+            tabcCalc.Controls.Add(btn5);
+            tabcCalc.Controls.Add(btnFact);
+            tabcCalc.Controls.Add(btn6);
+            tabcCalc.Controls.Add(btnCos);
+            tabcCalc.Controls.Add(btn1);
+            tabcCalc.Controls.Add(btnSin);
+            tabcCalc.Controls.Add(btn2);
+            tabcCalc.Controls.Add(btnPi);
+            tabcCalc.Controls.Add(btn3);
+            tabcCalc.Controls.Add(btnE);
+            tabcCalc.Controls.Add(btn0);
+            tabcCalc.Controls.Add(btnPow);
+            tabcCalc.Controls.Add(btnDevide);
+            tabcCalc.Controls.Add(btnRightBracket);
+            tabcCalc.Controls.Add(btnMultipli);
+            tabcCalc.Controls.Add(btnMinus);
+            tabcCalc.Controls.Add(btnPercent);
+            tabcCalc.Controls.Add(btnPlus);
+            tabcCalc.Controls.Add(btnDelete);
+            tabcCalc.Controls.Add(btnAnswer);
+            tabcCalc.Controls.Add(btnClean);
+            tabcCalc.Controls.Add(btnComma);
+            tabcCalc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            tabcCalc.Location = new System.Drawing.Point(4, 30);
+            tabcCalc.Name = "tabcCalc";
+            tabcCalc.Padding = new Padding(3);
+            tabcCalc.Size = new System.Drawing.Size(578, 491);
+            tabcCalc.TabIndex = 1;
+            tabcCalc.Text = "Калькулятор";
+            // 
+            // btnHistory
+            // 
+            btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnHistory.Location = new System.Drawing.Point(423, 416);
+            btnHistory.Margin = new Padding(4, 3, 4, 3);
+            btnHistory.Name = "btnHistory";
+            btnHistory.RightToLeft = RightToLeft.No;
+            btnHistory.Size = new System.Drawing.Size(128, 60);
+            btnHistory.TabIndex = 44;
+            btnHistory.Text = "History";
+            btnHistory.UseVisualStyleBackColor = true;
+            btnHistory.Click += btnHistory_Click;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Location = new System.Drawing.Point(4, 30);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new System.Drawing.Size(578, 491);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // MainForm1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(812, 627);
-            Controls.Add(btnExp);
-            Controls.Add(txtTextField);
-            Controls.Add(btnAbs);
-            Controls.Add(btnLn);
-            Controls.Add(btnLog);
-            Controls.Add(btnCsc);
-            Controls.Add(btnSec);
-            Controls.Add(btnCtg);
-            Controls.Add(btnTg);
-            Controls.Add(btnFact);
-            Controls.Add(btnCos);
-            Controls.Add(btnSin);
-            Controls.Add(btnPi);
-            Controls.Add(btnE);
-            Controls.Add(btnPow);
-            Controls.Add(btnRightBracket);
-            Controls.Add(btnLeftBracket);
-            Controls.Add(lbAnswer);
-            Controls.Add(btnPercent);
-            Controls.Add(btnDelete);
-            Controls.Add(btnClean);
-            Controls.Add(btnComma);
-            Controls.Add(btnAnswer);
-            Controls.Add(btnPlus);
-            Controls.Add(btnMinus);
-            Controls.Add(btnMultipli);
-            Controls.Add(btnDevide);
-            Controls.Add(btn0);
-            Controls.Add(btn3);
-            Controls.Add(btn2);
-            Controls.Add(btn1);
-            Controls.Add(btn6);
-            Controls.Add(btn5);
-            Controls.Add(btn4);
-            Controls.Add(btn9);
-            Controls.Add(btn8);
-            Controls.Add(btn7);
+            ClientSize = new System.Drawing.Size(586, 525);
+            Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form1";
+            Name = "MainForm1";
             Text = "The Best Calculator";
+            tabControl1.ResumeLayout(false);
+            tabcCalc.ResumeLayout(false);
+            tabcCalc.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -630,6 +695,10 @@ namespace Calculator
         private Button btnTg;
         private TextBox txtTextField;
         private Button btnExp;
+        private TabControl tabControl1;
+        private TabPage tabcCalc;
+        private TabPage tabPage1;
+        private Button btnHistory;
     }
 }
 
