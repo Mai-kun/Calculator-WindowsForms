@@ -33,22 +33,23 @@
             // 
             // txtHistory
             // 
+            txtHistory.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            txtHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             txtHistory.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtHistory.Location = new System.Drawing.Point(12, 9);
             txtHistory.Multiline = true;
             txtHistory.Name = "txtHistory";
             txtHistory.ReadOnly = true;
             txtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            txtHistory.Size = new System.Drawing.Size(275, 267);
+            txtHistory.Size = new System.Drawing.Size(257, 266);
             txtHistory.TabIndex = 0;
             // 
             // HistoryForm
             // 
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            ClientSize = new System.Drawing.Size(298, 287);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(286, 293);
             Controls.Add(txtHistory);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             Name = "HistoryForm";
             Text = "History";
             ResumeLayout(false);

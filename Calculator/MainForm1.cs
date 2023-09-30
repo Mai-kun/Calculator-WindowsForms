@@ -219,8 +219,8 @@ namespace Calculator
 
         private void AddMultiplySign()
         {
-            if (!string.IsNullOrEmpty(txtTextField.Text) && 
-                !IsMathematicalSignOrComma(txtTextField.Text[^1]) && 
+            if (!string.IsNullOrEmpty(txtTextField.Text) &&
+                !IsMathematicalSignOrComma(txtTextField.Text[^1]) &&
                 txtTextField.Text[^1] != '(')
             {
                 txtTextField.Text += '*';
