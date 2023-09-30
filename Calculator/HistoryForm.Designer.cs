@@ -39,14 +39,16 @@
             txtHistory.Name = "txtHistory";
             txtHistory.ReadOnly = true;
             txtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            txtHistory.Size = new System.Drawing.Size(336, 481);
+            txtHistory.Size = new System.Drawing.Size(275, 267);
             txtHistory.TabIndex = 0;
             // 
             // HistoryForm
             // 
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            ClientSize = new System.Drawing.Size(361, 502);
+            AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            ClientSize = new System.Drawing.Size(298, 287);
             Controls.Add(txtHistory);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             Name = "HistoryForm";
             Text = "History";
             ResumeLayout(false);

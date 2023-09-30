@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -14,8 +14,11 @@ namespace Calculator
         string history;
         private void btnHistory_Click(object sender, EventArgs e)
         {
-            HistoryForm historyForm = new HistoryForm(history);
-            historyForm.Show();
+            if (!Application.OpenForms.OfType<HistoryForm>().Any())
+            {
+                HistoryForm historyForm = new HistoryForm(history);
+                historyForm.Show();
+            }
         }
 
         private void btnClean_Click(object sender, EventArgs e)
@@ -55,8 +58,10 @@ namespace Calculator
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            try { txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1); }
-            catch { }
+            if (txtTextField.Text != "")
+            {
+                txtTextField.Text = txtTextField.Text.Remove(txtTextField.Text.Length - 1);
+            }
         }
 
         private static bool IsMathematicalSignOrComma(char lastSign)
@@ -292,7 +297,7 @@ namespace Calculator
 
         private void btnFact_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtTextField.Text) && Char.IsDigit(txtTextField.Text[^1]))
+            if (!string.IsNullOrEmpty(txtTextField.Text) && Char.IsDigit(txtTextField.Text[^1]) || txtTextField.Text[^1] == ')')
             {
                 txtTextField.Text += "!";
             }
