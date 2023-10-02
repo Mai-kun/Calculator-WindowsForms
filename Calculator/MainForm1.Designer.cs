@@ -70,9 +70,31 @@ namespace Calculator
             tabControl1 = new TabControl();
             tabcCalc = new TabPage();
             btnHistory = new Button();
-            tabPage1 = new TabPage();
+            tabMatrix = new TabPage();
+            txtHelp = new TextBox();
+            dataGridView3 = new DataGridView();
+            btnMatrixDivide = new Button();
+            btnMatrixMultiply = new Button();
+            btnMatrixMinus = new Button();
+            btnMatrixPlus = new Button();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            label3 = new Label();
+            label4 = new Label();
+            btnCreateMatrix2 = new Button();
+            txtRow2 = new TextBox();
+            txtСolumn2 = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            btnCreateMatrix1 = new Button();
+            txtRow1 = new TextBox();
+            txtСolumn1 = new TextBox();
             tabControl1.SuspendLayout();
             tabcCalc.SuspendLayout();
+            tabMatrix.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // btn7
@@ -561,9 +583,9 @@ namespace Calculator
             // 
             // tabControl1
             // 
-            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabcCalc);
-            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabMatrix);
+            tabControl1.Dock = DockStyle.Top;
             tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             tabControl1.Location = new System.Drawing.Point(0, 0);
             tabControl1.Name = "tabControl1";
@@ -632,15 +654,221 @@ namespace Calculator
             btnHistory.UseVisualStyleBackColor = true;
             btnHistory.Click += btnHistory_Click;
             // 
-            // tabPage1
+            // tabMatrix
             // 
-            tabPage1.Location = new System.Drawing.Point(4, 30);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new System.Drawing.Size(578, 491);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
+            tabMatrix.Controls.Add(txtHelp);
+            tabMatrix.Controls.Add(dataGridView3);
+            tabMatrix.Controls.Add(btnMatrixDivide);
+            tabMatrix.Controls.Add(btnMatrixMultiply);
+            tabMatrix.Controls.Add(btnMatrixMinus);
+            tabMatrix.Controls.Add(btnMatrixPlus);
+            tabMatrix.Controls.Add(dataGridView1);
+            tabMatrix.Controls.Add(dataGridView2);
+            tabMatrix.Controls.Add(label3);
+            tabMatrix.Controls.Add(label4);
+            tabMatrix.Controls.Add(btnCreateMatrix2);
+            tabMatrix.Controls.Add(txtRow2);
+            tabMatrix.Controls.Add(txtСolumn2);
+            tabMatrix.Controls.Add(label2);
+            tabMatrix.Controls.Add(label1);
+            tabMatrix.Controls.Add(btnCreateMatrix1);
+            tabMatrix.Controls.Add(txtRow1);
+            tabMatrix.Controls.Add(txtСolumn1);
+            tabMatrix.Location = new System.Drawing.Point(4, 30);
+            tabMatrix.Name = "tabMatrix";
+            tabMatrix.Padding = new Padding(3);
+            tabMatrix.Size = new System.Drawing.Size(578, 491);
+            tabMatrix.TabIndex = 0;
+            tabMatrix.Text = "Матрицы";
+            tabMatrix.UseVisualStyleBackColor = true;
+            // 
+            // txtHelp
+            // 
+            txtHelp.BackColor = System.Drawing.Color.MistyRose;
+            txtHelp.Enabled = false;
+            txtHelp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtHelp.Location = new System.Drawing.Point(341, 282);
+            txtHelp.Multiline = true;
+            txtHelp.Name = "txtHelp";
+            txtHelp.ReadOnly = true;
+            txtHelp.Size = new System.Drawing.Size(226, 184);
+            txtHelp.TabIndex = 18;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.AllowUserToAddRows = false;
+            dataGridView3.AllowUserToDeleteRows = false;
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.ColumnHeadersVisible = false;
+            dataGridView3.Location = new System.Drawing.Point(109, 280);
+            dataGridView3.MultiSelect = false;
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.ReadOnly = true;
+            dataGridView3.RowHeadersVisible = false;
+            dataGridView3.RowTemplate.Height = 25;
+            dataGridView3.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView3.Size = new System.Drawing.Size(226, 186);
+            dataGridView3.TabIndex = 17;
+            // 
+            // btnMatrixDivide
+            // 
+            btnMatrixDivide.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMatrixDivide.Location = new System.Drawing.Point(247, 226);
+            btnMatrixDivide.Name = "btnMatrixDivide";
+            btnMatrixDivide.Size = new System.Drawing.Size(88, 41);
+            btnMatrixDivide.TabIndex = 16;
+            btnMatrixDivide.Text = "/";
+            btnMatrixDivide.UseVisualStyleBackColor = true;
+            btnMatrixDivide.Click += btnMatrixDivide_Click;
+            // 
+            // btnMatrixMultiply
+            // 
+            btnMatrixMultiply.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMatrixMultiply.Location = new System.Drawing.Point(247, 182);
+            btnMatrixMultiply.Name = "btnMatrixMultiply";
+            btnMatrixMultiply.Size = new System.Drawing.Size(88, 41);
+            btnMatrixMultiply.TabIndex = 15;
+            btnMatrixMultiply.Text = "*";
+            btnMatrixMultiply.UseVisualStyleBackColor = true;
+            btnMatrixMultiply.Click += btnMatrixMultiply_Click;
+            // 
+            // btnMatrixMinus
+            // 
+            btnMatrixMinus.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMatrixMinus.Location = new System.Drawing.Point(247, 138);
+            btnMatrixMinus.Name = "btnMatrixMinus";
+            btnMatrixMinus.Size = new System.Drawing.Size(88, 41);
+            btnMatrixMinus.TabIndex = 14;
+            btnMatrixMinus.Text = "-";
+            btnMatrixMinus.UseVisualStyleBackColor = true;
+            btnMatrixMinus.Click += btnMatrixMinus_Click;
+            // 
+            // btnMatrixPlus
+            // 
+            btnMatrixPlus.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btnMatrixPlus.Location = new System.Drawing.Point(247, 94);
+            btnMatrixPlus.Name = "btnMatrixPlus";
+            btnMatrixPlus.Size = new System.Drawing.Size(88, 41);
+            btnMatrixPlus.TabIndex = 13;
+            btnMatrixPlus.Text = "+";
+            btnMatrixPlus.UseVisualStyleBackColor = true;
+            btnMatrixPlus.Click += btnMatrixPlus_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersVisible = false;
+            dataGridView1.Location = new System.Drawing.Point(15, 88);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView1.Size = new System.Drawing.Size(226, 186);
+            dataGridView1.TabIndex = 12;
+            dataGridView1.CurrentCellChanged += dataGridView1_CurrentCellChanged;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.ColumnHeadersVisible = false;
+            dataGridView2.Location = new System.Drawing.Point(341, 88);
+            dataGridView2.MultiSelect = false;
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView2.Size = new System.Drawing.Size(226, 186);
+            dataGridView2.TabIndex = 11;
+            dataGridView2.CurrentCellChanged += dataGridView2_CurrentCellChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(341, 47);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 21);
+            label3.TabIndex = 9;
+            label3.Text = "Строки";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(341, 12);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(74, 21);
+            label4.TabIndex = 8;
+            label4.Text = "Столбцы";
+            // 
+            // btnCreateMatrix2
+            // 
+            btnCreateMatrix2.Location = new System.Drawing.Point(490, 9);
+            btnCreateMatrix2.Name = "btnCreateMatrix2";
+            btnCreateMatrix2.Size = new System.Drawing.Size(77, 64);
+            btnCreateMatrix2.TabIndex = 7;
+            btnCreateMatrix2.Text = "Создать";
+            btnCreateMatrix2.UseVisualStyleBackColor = true;
+            btnCreateMatrix2.Click += btnCreateMatrix2_Click;
+            // 
+            // txtRow2
+            // 
+            txtRow2.Location = new System.Drawing.Point(421, 44);
+            txtRow2.Name = "txtRow2";
+            txtRow2.Size = new System.Drawing.Size(61, 29);
+            txtRow2.TabIndex = 6;
+            // 
+            // txtСolumn2
+            // 
+            txtСolumn2.Location = new System.Drawing.Point(421, 9);
+            txtСolumn2.Name = "txtСolumn2";
+            txtСolumn2.Size = new System.Drawing.Size(61, 29);
+            txtСolumn2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(15, 44);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(62, 21);
+            label2.TabIndex = 4;
+            label2.Text = "Строки";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(15, 9);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(74, 21);
+            label1.TabIndex = 3;
+            label1.Text = "Столбцы";
+            // 
+            // btnCreateMatrix1
+            // 
+            btnCreateMatrix1.Location = new System.Drawing.Point(164, 6);
+            btnCreateMatrix1.Name = "btnCreateMatrix1";
+            btnCreateMatrix1.Size = new System.Drawing.Size(77, 64);
+            btnCreateMatrix1.TabIndex = 2;
+            btnCreateMatrix1.Text = "Создать";
+            btnCreateMatrix1.UseVisualStyleBackColor = true;
+            btnCreateMatrix1.Click += btnCreateMatrix1_Click;
+            // 
+            // txtRow1
+            // 
+            txtRow1.Location = new System.Drawing.Point(95, 41);
+            txtRow1.Name = "txtRow1";
+            txtRow1.Size = new System.Drawing.Size(61, 29);
+            txtRow1.TabIndex = 1;
+            // 
+            // txtСolumn1
+            // 
+            txtСolumn1.Location = new System.Drawing.Point(95, 6);
+            txtСolumn1.Name = "txtСolumn1";
+            txtСolumn1.Size = new System.Drawing.Size(61, 29);
+            txtСolumn1.TabIndex = 0;
             // 
             // MainForm1
             // 
@@ -648,13 +876,17 @@ namespace Calculator
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(586, 525);
             Controls.Add(tabControl1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             Name = "MainForm1";
             Text = "The Best Calculator";
             tabControl1.ResumeLayout(false);
             tabcCalc.ResumeLayout(false);
             tabcCalc.PerformLayout();
+            tabMatrix.ResumeLayout(false);
+            tabMatrix.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
@@ -697,9 +929,28 @@ namespace Calculator
         private TextBox txtTextField;
         private Button btnExp;
         private TabControl tabControl1;
-        private TabPage tabcCalc;
-        private TabPage tabPage1;
+        private TabPage tabCalc;
+        private TabPage tabMatrix;
         private Button btnHistory;
+        private TabPage tabcCalc;
+        private Label label3;
+        private Label label4;
+        private Button btnCreateMatrix2;
+        private TextBox txtRow2;
+        private TextBox txtСolumn2;
+        private Label label2;
+        private Label label1;
+        private Button btnCreateMatrix1;
+        private TextBox txtRow1;
+        private TextBox txtСolumn1;
+        private DataGridView dataGridView2;
+        private DataGridView dataGridView1;
+        private Button btnMatrixPlus;
+        private Button btnMatrixDivide;
+        private Button btnMatrixMultiply;
+        private Button btnMatrixMinus;
+        private DataGridView dataGridView3;
+        private TextBox txtHelp;
     }
 }
 

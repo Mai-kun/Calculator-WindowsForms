@@ -44,11 +44,11 @@ namespace Calculator
             { "ctg", 'g' },
             { "exp", 'x' },
             { "log", 'l' },
-            { "ln", 'n' },
             { "sec", '$' },
             { "csc", '@' },
             { "abs", 'a' },
-            { "fac", '!' }
+            { "ln", 'n' },
+            { "!", '!' }
         };
         private static readonly Dictionary<string, char> Constants = new()
         {
@@ -102,64 +102,82 @@ namespace Calculator
                     continue;
                 }
 
+                if (i < expression.Length - 3 && MathematicalFunctions.ContainsKey(expression[i..(i + 3)]))
+                {
+                    switch (expression[i..(i + 3)])
+                    {
+                        case "sin": 
+                            LexemeOperationToStack(MathematicalFunctions["sin"]); 
+                            i += 2;
+                            break;
+                        case "cos": 
+                            LexemeOperationToStack(MathematicalFunctions["cos"]); 
+                            i += 2;
+                            break;
+                        case "tan": 
+                            LexemeOperationToStack(MathematicalFunctions["tan"]); 
+                            i += 2;
+                            break;
+                        case "ctg": 
+                            LexemeOperationToStack(MathematicalFunctions["ctg"]); 
+                            i += 2;
+                            break;
+                        case "exp": 
+                            LexemeOperationToStack(MathematicalFunctions["exp"]); 
+                            i += 2;
+                            break;
+                        case "log": 
+                            LexemeOperationToStack(MathematicalFunctions["log"]); 
+                            i += 2;
+                            break;
+                        case "sec": 
+                            LexemeOperationToStack(MathematicalFunctions["sec"]);
+                            i += 2;
+                            break;
+                        case "csc": 
+                            LexemeOperationToStack(MathematicalFunctions["csc"]); 
+                            i += 2;
+                            break;
+                        case "abs": 
+                            LexemeOperationToStack(MathematicalFunctions["abs"]); 
+                            i += 2;
+                            break;
+                    }
+                    continue;
+                }
+                if (i < expression.Length - 3 && MathematicalFunctions.ContainsKey(expression[i..(i + 2)]))
+                {
+                    switch (expression[i..(i + 2)])
+                    {
+                        case "ln":
+                            LexemeOperationToStack(MathematicalFunctions["ln"]);
+                            i += 1;
+                            break;
+                    }
+                    continue;
+                }
+                if (MathematicalFunctions.ContainsKey(expression[i].ToString()))
+                {
+                    switch (expression[i])
+                    {
+                        case '!':
+                            LexemeOperationToStack(MathematicalFunctions["!"]);
+                            break;
+                    }
+                    continue;
+                }
+
                 if (Constants.ContainsValue(expression[i]))
                 {
                     switch (expression[i])
                     {
                         case 'e':
                             const double E = Math.E;
-                            LexemeNumberToStack(E); 
+                            LexemeNumberToStack(E);
                             break;
-                        case 'p': 
+                        case 'p':
                             const double PI = Math.PI;
-                            LexemeNumberToStack(PI); 
-                            break;
-                    }
-                    continue;
-                }
-
-                if (MathematicalFunctions.ContainsValue(expression[i]))
-                {
-                    switch (expression[i..(i + 3)])
-                    {
-                        case "sin": 
-                            LexemeOperationToStack(MathematicalFunctions["sin"]); 
-                            break;
-                        case "cos": 
-                            LexemeOperationToStack(MathematicalFunctions["cos"]); 
-                            break;
-                        case "tan": 
-                            LexemeOperationToStack(MathematicalFunctions["tan"]); 
-                            break;
-                        case "ctg": 
-                            LexemeOperationToStack(MathematicalFunctions["ctg"]); 
-                            break;
-                        case "exp": 
-                            LexemeOperationToStack(MathematicalFunctions["exp"]); 
-                            break;
-                        case "log": 
-                            LexemeOperationToStack(MathematicalFunctions["log"]); 
-                            break;
-                        case "sec": 
-                            LexemeOperationToStack(MathematicalFunctions["sec"]); 
-                            break;
-                        case "csc": 
-                            LexemeOperationToStack(MathematicalFunctions["csc"]); 
-                            break;
-                        case "abs": 
-                            LexemeOperationToStack(MathematicalFunctions["abs"]); 
-                            break;
-                    }
-
-                    switch (expression[i..(i + 2)])
-                    {
-                        case "ln": LexemeOperationToStack(MathematicalFunctions["ln"]);
-                            break;
-                    }
-
-                    switch (expression[i])
-                    {
-                        case '!': LexemeOperationToStack(MathematicalFunctions["fac"]);
+                            LexemeNumberToStack(PI);
                             break;
                     }
                     continue;
@@ -278,18 +296,13 @@ namespace Calculator
                     LexemeToStackAfterCalculating(c);
                     break;
 
-                case 'e':
+                case 'x':
                     c = Math.Exp(a);
                     LexemeToStackAfterCalculating(c);
                     break;
 
                 case 'l':
                     c = Math.Log10(a);
-                    LexemeToStackAfterCalculating(c);
-                    break;
-
-                case 'n':
-                    c = Math.Log2(a);
                     LexemeToStackAfterCalculating(c);
                     break;
 
@@ -309,6 +322,11 @@ namespace Calculator
 
                 case 'a':
                     c = Math.Abs(a);
+                    LexemeToStackAfterCalculating(c);
+                    break;
+                
+                case 'n':
+                    c = Math.Log2(a);
                     LexemeToStackAfterCalculating(c);
                     break;
 

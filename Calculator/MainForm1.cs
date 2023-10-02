@@ -6,10 +6,17 @@ namespace Calculator
 {
     public partial class MainForm1 : Form
     {
+
         public MainForm1()
         {
             InitializeComponent();
+            btnCreateMatrix1.Text = "Create";
+            btnCreateMatrix2.Text = "Create";
+            txtHelp.Visible = false;
+            dataGridView3.Visible = false;
         }
+
+        #region Калькулятор
 
         string history;
         private void btnHistory_Click(object sender, EventArgs e)
@@ -192,7 +199,7 @@ namespace Calculator
             }
             catch (Exception)
             {
-                lbAnswer.Text = "Error";
+                lbAnswer.Text = "Ошибка";
                 history += lbAnswer.Text + Environment.NewLine;
                 txtTextField.Text = "";
             }
@@ -302,6 +309,161 @@ namespace Calculator
                 txtTextField.Text += "!";
             }
         }
+
+        #endregion
+
+        #region Матрицы
+        private void AutoSizeAllCells()
+        {
+            dataGridView1.AutoResizeColumns();
+            dataGridView1.AutoResizeRows();
+            dataGridView2.AutoResizeColumns();
+            dataGridView2.AutoResizeRows();
+        }
+
+        private void btnCreateMatrix1_Click(object sender, EventArgs e)
+        {
+            if (txtRow1.Text == "" || txtСolumn1.Text == "")
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Введите размер первой матрицы";
+                txtHelp.Visible = true;
+            }
+            else
+            {
+                dataGridView1.RowCount = Convert.ToInt32(txtRow1.Text);
+                dataGridView1.ColumnCount = Convert.ToInt32(txtСolumn1.Text);
+                AutoSizeAllCells();
+                btnCreateMatrix1.Text = "Обновить";
+            }
+        }
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+            AutoSizeAllCells();
+        }
+
+
+        private void btnCreateMatrix2_Click(object sender, EventArgs e)
+        {
+            if (txtRow2.Text == "" || txtСolumn2.Text == "")
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Введите размер второй матрицы";
+                txtHelp.Visible = true;
+            }
+            else
+            {
+                dataGridView2.RowCount = Convert.ToInt32(txtRow2.Text);
+                dataGridView2.ColumnCount = Convert.ToInt32(txtСolumn2.Text);
+                AutoSizeAllCells();
+                btnCreateMatrix2.Text = "Обновить";
+            }
+        }
+        private void dataGridView2_CurrentCellChanged(object sender, EventArgs e)
+        {
+            AutoSizeAllCells();
+        }
+
+
+        private void btnMatrixPlus_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.ColumnCount != dataGridView2.ColumnCount || dataGridView1.RowCount != dataGridView2.RowCount)
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Количество строк и столбцов у обоих матриц должны быь одинаковы";
+                txtHelp.Visible = true;
+            }
+            else
+            {
+                txtHelp.Visible = false;
+                dataGridView3.Visible = true;
+                dataGridView3.RowCount = dataGridView1.RowCount;
+                dataGridView3.ColumnCount = dataGridView1.ColumnCount;
+
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView2.ColumnCount; j++)
+                    {
+                        dataGridView3.Rows[i].Cells[j].Value = Convert.ToDouble(dataGridView1.Rows[i].Cells[j].Value) + Convert.ToDouble(dataGridView2.Rows[i].Cells[j].Value);
+                    }
+                }
+                dataGridView3.AutoResizeColumns();
+                dataGridView3.AutoResizeRows();
+            }
+        }
+
+        private void btnMatrixMinus_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.ColumnCount != dataGridView2.ColumnCount || dataGridView1.RowCount != dataGridView2.RowCount)
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Количество строк и столбцов у обоих матриц должны быь одинаковы";
+                txtHelp.Visible = true;
+            }
+            else
+            {
+                txtHelp.Visible = false;
+                dataGridView3.Visible = true;
+                dataGridView3.RowCount = dataGridView1.RowCount;
+                dataGridView3.ColumnCount = dataGridView1.ColumnCount;
+
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView2.ColumnCount; j++)
+                    {
+                        dataGridView3.Rows[i].Cells[j].Value = Convert.ToDouble(dataGridView1.Rows[i].Cells[j].Value) - Convert.ToDouble(dataGridView2.Rows[i].Cells[j].Value);
+                    }
+                }
+                dataGridView3.AutoResizeColumns();
+                dataGridView3.AutoResizeRows();
+            }
+        }
+
+        private void btnMatrixMultiply_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.ColumnCount != dataGridView2.RowCount)
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Количество столбцов первой матрицы должно совпадать с количеством строк второй матрицы";
+                txtHelp.Visible = true;
+            }
+            else if (dataGridView1.RowCount < dataGridView2.ColumnCount)
+            {
+                txtHelp.Text = "Ошибка:" + Environment.NewLine +
+                    "Количество срок первой матрицы должно быть меньше количества столбцов второй матрицы";
+                txtHelp.Visible = true;
+            }
+            else
+            {
+                txtHelp.Visible = false;
+                dataGridView3.Visible = true;
+                dataGridView3.RowCount = dataGridView1.RowCount;
+                dataGridView3.ColumnCount = dataGridView2.ColumnCount;
+
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView2.ColumnCount; j++)
+                    {
+                        double temp = 0;
+                        for (int k = 0; k < dataGridView2.RowCount; k++)
+                        {
+                            temp += Convert.ToDouble(dataGridView1.Rows[i].Cells[k].Value) * Convert.ToDouble(dataGridView2.Rows[k].Cells[j].Value);
+                        }
+                        dataGridView3.Rows[i].Cells[j].Value = temp;
+                    }
+                }
+                dataGridView3.AutoResizeColumns();
+                dataGridView3.AutoResizeRows();
+            }
+
+        }
+
+        private void btnMatrixDivide_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
     }
 }
 
