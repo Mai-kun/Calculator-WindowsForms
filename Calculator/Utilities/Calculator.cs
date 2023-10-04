@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Calculator
-{ 
+namespace Calculator.Utilities
+{
     static class Calculator
     {
         private static readonly Stack<Lexeme> stackNumbers = new();
@@ -91,7 +91,7 @@ namespace Calculator
                 {
                     string temp = "";
 
-                    while (i < expression.Length && (Char.IsDigit(expression[i]) || expression[i] == ','))
+                    while (i < expression.Length && (char.IsDigit(expression[i]) || expression[i] == ','))
                     {
                         temp += expression[i].ToString();
                         i++;
@@ -106,40 +106,40 @@ namespace Calculator
                 {
                     switch (expression[i..(i + 3)])
                     {
-                        case "sin": 
-                            LexemeOperationToStack(MathematicalFunctions["sin"]); 
+                        case "sin":
+                            LexemeOperationToStack(MathematicalFunctions["sin"]);
                             i += 2;
                             break;
-                        case "cos": 
-                            LexemeOperationToStack(MathematicalFunctions["cos"]); 
+                        case "cos":
+                            LexemeOperationToStack(MathematicalFunctions["cos"]);
                             i += 2;
                             break;
-                        case "tan": 
-                            LexemeOperationToStack(MathematicalFunctions["tan"]); 
+                        case "tan":
+                            LexemeOperationToStack(MathematicalFunctions["tan"]);
                             i += 2;
                             break;
-                        case "ctg": 
-                            LexemeOperationToStack(MathematicalFunctions["ctg"]); 
+                        case "ctg":
+                            LexemeOperationToStack(MathematicalFunctions["ctg"]);
                             i += 2;
                             break;
-                        case "exp": 
-                            LexemeOperationToStack(MathematicalFunctions["exp"]); 
+                        case "exp":
+                            LexemeOperationToStack(MathematicalFunctions["exp"]);
                             i += 2;
                             break;
-                        case "log": 
-                            LexemeOperationToStack(MathematicalFunctions["log"]); 
+                        case "log":
+                            LexemeOperationToStack(MathematicalFunctions["log"]);
                             i += 2;
                             break;
-                        case "sec": 
+                        case "sec":
                             LexemeOperationToStack(MathematicalFunctions["sec"]);
                             i += 2;
                             break;
-                        case "csc": 
-                            LexemeOperationToStack(MathematicalFunctions["csc"]); 
+                        case "csc":
+                            LexemeOperationToStack(MathematicalFunctions["csc"]);
                             i += 2;
                             break;
-                        case "abs": 
-                            LexemeOperationToStack(MathematicalFunctions["abs"]); 
+                        case "abs":
+                            LexemeOperationToStack(MathematicalFunctions["abs"]);
                             i += 2;
                             break;
                     }
@@ -228,7 +228,7 @@ namespace Calculator
                 }
             }
         }
-        
+
         private static void ModifyStack()
         {
             double a, b, c, cos, sin;
@@ -244,7 +244,7 @@ namespace Calculator
                     break;
 
                 case '-':
-                    if (stackNumbers.Count == 0) 
+                    if (stackNumbers.Count == 0)
                         b = 0;
                     else
                         b = stackNumbers.Pop().value;
@@ -324,7 +324,7 @@ namespace Calculator
                     c = Math.Abs(a);
                     LexemeToStackAfterCalculating(c);
                     break;
-                
+
                 case 'n':
                     c = Math.Log2(a);
                     LexemeToStackAfterCalculating(c);
