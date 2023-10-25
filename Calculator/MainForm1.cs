@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,7 +6,6 @@ namespace Calculator
 {
     public partial class MainForm1 : Form
     {
-
         public MainForm1()
         {
             InitializeComponent();
@@ -15,7 +13,6 @@ namespace Calculator
             txtHelpData.Visible = false;
             txtHelpTemperature.Visible = false;
             dataGridView3.Visible = false;
-
         }
 
         #region Калькулятор
@@ -579,7 +576,7 @@ namespace Calculator
             (cbData1.SelectedIndex, cbData2.SelectedIndex) =
                 (cbData2.SelectedIndex, cbData1.SelectedIndex);
         }
-        #endregion
+        #endregion InformationData
 
         #region Temperature
         private int selectionStateTemp1 = -1;
@@ -667,10 +664,9 @@ namespace Calculator
             (cbTemperature1.SelectedIndex, cbTemperature2.SelectedIndex) =
                 (cbTemperature2.SelectedIndex, cbTemperature1.SelectedIndex);
         }
+        #endregion Temperature
 
-        #endregion
-
-        #endregion
+        #endregion Переводы
 
 
 
